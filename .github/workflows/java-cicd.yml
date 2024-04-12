@@ -80,7 +80,7 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t blazerrt86899/boardgame:latest
+        docker build -t blazerrt86899/boardgame:latest .
     
     - name: Trivy Image Scan
       run: |
@@ -119,3 +119,4 @@ jobs:
         run: |
           kubectl create ns webapps
           kubectl apply -f deployment-service.yaml -n webapps
+          kubectl get svc -n webapps
