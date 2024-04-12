@@ -7,7 +7,7 @@ on:
 jobs:
   build:
 
-    runs-on: [ gcp-ce ]
+    runs-on: [ gcp-ce ] #self-hosted runner
 
     steps:
     - name: Checkout Source Code
@@ -103,13 +103,18 @@ jobs:
         docker push blazerrt86899/boardgame:latest
 
   deploy:
-    runs-on: [gcp-ce]
+    runs-on: [gcp-ce] #self-hosted runner
     needs: [build]
 
     steps:
       - name: Pull Docker Image
         run: |
           docker pull blazerrt86899/boardgame:latest
+      
+      # Configure when using GKE Standard Cluster
+      - name: Install GKE CLI Auth Plugin
+        run: |
+          sudo apt-get update && sudo apt-get install google-cloud-cli-gke-gcloud-auth-plugin
       
       - name: Update GKE cluster config
         run: |
