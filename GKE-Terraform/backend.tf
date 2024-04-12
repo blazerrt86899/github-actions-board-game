@@ -1,6 +1,6 @@
 terraform {
  backend "gcs" {
-   bucket  = google_storage_bucket.backend_bucket.name
+   bucket  = "terraform-boardgame-bucket-tfstate"
    prefix  = "terraform/state"
  }
 }
