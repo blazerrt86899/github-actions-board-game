@@ -46,6 +46,12 @@ jobs:
       with:
         name: Trivy File Scan Report
         path: trivy-fs-report.html
+        
+    - name: Cache Sonarqube Report
+      uses: actions/cache@v3
+      with:
+        path: build/sonar/
+        key: commit-${{ github.sha }}-workflow-${{ github.run_id }}-${{ github.run_number }}-report-task-${{ hashFiles('build/sonar/**') }}
     
     - name: Sonarqube Scan
       uses: sonarsource/sonarqube-scan-action@master
