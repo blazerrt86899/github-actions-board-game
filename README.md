@@ -51,3 +51,10 @@
    - username: bugs | password: bunny (user role)
    - username: daffy | password: duck (manager role)
 5. You can also sign-up as a new user and customize your role to play with the application! 😊
+
+## CICD Pipeline for Deployment
+
+![board-game](https://github.com/blazerrt86899/github-actions-board-game/assets/35737000/21cf79ca-b95e-4617-9bdd-935d000b1f04)
+
+
+
