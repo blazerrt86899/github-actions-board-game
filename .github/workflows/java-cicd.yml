@@ -80,7 +80,7 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t blazerrt86899/boardgame:latest
+        docker build -t blazerrt86899/boardgame:latest .
     
     - name: Trivy Image Scan
       run: |
