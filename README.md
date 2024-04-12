@@ -9,7 +9,8 @@ This web application displays lists of board games and their reviews. While anyo
 
 - Java
 - Spring Boot
-- Amazon Web Services(AWS) EC2
+- Google Kubernetes Engine (GKE)
+- Google Compute Engine
 - Thymeleaf
 - Thymeleaf Fragments
 - HTML5
@@ -34,7 +35,7 @@ This web application displays lists of board games and their reviews. While anyo
   - Non-members only can see the boardgame lists and reviews
   - Users can add board games and write reviews
   - Managers can edit and delete the reviews
-- Deployed the application on AWS EC2
+- Deployed the application on Google Compute Engine
 - JUnit test framework for unit testing
 - Spring MVC best practices to segregate views, controllers, and database packages
 - JDBC for database connectivity and interaction
